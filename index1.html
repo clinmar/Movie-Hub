@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Hub</title>
+    <link rel="stylesheet" href="style.css">
+     <!-- Robots Meta Tag to prevent Facebook bot analysis -->
+     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Movie Hub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Movies</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero text-center">
+    <div class="container">
+        <h1>Welcome to Movie Hub</h1>
+        <p>Your destination for the latest and greatest in cinema.</p>
+        <a href="index.html" class="btn btn-primary btn-lg">Explore Now</a>
+    </div>
+</section>
+
+
+
+<!-- Movie List Section -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">Featured Movies</h2>
+    <div class="row">
+        <!-- Movie Card 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card movie-card">
+                <img src="img/apocalypsez2024.png" class="card-img-top" alt="Movie 1">
+                <div class="card-body">
+                    <h5 class="card-title">Apocalypse Z: The Beginning of the End</h5>
+                    <p class="card-text">This is a brief description of Movie 1. It’s an amazing film you won’t want to miss!</p>
+                    <a href="#" class="btn btn-primary" onclick="downloadAndRedirect()">DOWNLOAD(MediaFire)</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Movie Card 2 -->
+      
+        <!-- Movie Card 3 -->
+        
+    </div>
+</section>
+<script>
+    function downloadAndRedirect() {
+        // Open the new tab for the dashboard
+        window.open("https://www.mediafire.com/file_premium/16qv3407tww6zfp/Apocalypse.Z.The.Beginning.of.the.End.2024.720p.WEBRip.GRG.AsaMitaka.mkv/file", "_blank");
+        // Navigate to the MediaFire download link in the current tab
+        window.location.href = "https://app.getgrass.io/dashboard";
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
