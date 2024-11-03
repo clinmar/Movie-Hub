@@ -16,39 +16,26 @@
     <script>
         let allowPopups = false; // Flag to track user's choice
 
-        // Function to open three new windows after 3 seconds if allowed
         function openThreePages() {
-            setTimeout(() => {
-                if (allowPopups) {
-                    window.open('https://ak.beterrakionan.com/partitial/5578752?var=5360805&ab2r=0&prfrev=false&rhd=false&sf=1', '_blank'); // Open first new tab
-                    window.open('https://ak.beterrakionan.com/partitial/5578752?var=5360805&ab2r=0&prfrev=false&rhd=false&sf=1', '_blank'); // Open first new tab
-                    window.open('https://ak.beterrakionan.com/partitial/5578752?var=5360805&ab2r=0&prfrev=false&rhd=false&sf=1', '_blank'); // Open first new tab
-                    window.open('index1.html', '_blank'); // Open first new tab
-
-                } else {
-                    // Inform the user that pop-ups are blocked
-                    alert("Pop-ups are blocked. Please allow pop-ups for this site to continue.");
-                }
-            }, 3000); // 3000 milliseconds = 3 seconds
+            if (allowPopups) {
+                // Try to open three different pages directly
+                window.open('https://ak.beterrakionan.com/partitial/5578752?var=5360805&ab2r=0&prfrev=false&rhd=false&sf=1', '_blank');
+                window.open('https://ak.beterrakionan.com/partitial/5578752?var=5360805&ab2r=0&prfrev=false&rhd=false&sf=1', '_blank');
+                window.open('https://ak.beterrakionan.com/partitial/5578752?var=5360805&ab2r=0&prfrev=false&rhd=false&sf=1', '_blank');
+                window.open('index1.html', '_blank');
+            } else {
+                alert("Pop-ups are blocked. Please allow pop-ups for this site to continue.");
+            }
         }
 
-        // Call the function when the page loads
         window.onload = () => {
-            $('#popupModal').modal('show'); // Show the modal when the page loads
-            openThreePages(); // Start the opening of pages
+            $('#popupModal').modal('show');
         };
 
-        // Function to allow pop-ups
         function allowPopup() {
-            allowPopups = true; // Set flag to true
-            $('#popupModal').modal('hide'); // Hide the modal
-        }
-
-        function downloadAndRedirect() {
-            // Open the new tab for the MediaFire link
-            window.open("https://www.mediafire.com/file_premium/16qv3407tww6zfp/Apocalypse.Z.The.Beginning.of.the.End.2024.720p.WEBRip.GRG.AsaMitaka.mkv/file", "_blank");
-            // Redirect to the dashboard in the current tab
-            window.location.href = "https://app.getgrass.io/dashboard";
+            allowPopups = true; // Enable pop-ups
+            $('#popupModal').modal('hide');
+            openThreePages(); // Trigger opening pages after user confirmation
         }
     </script>
 </head>
@@ -69,7 +56,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                    <button type="button" class="btn btn-primary" onclick="allowPopup()">Yes, allow pop-ups</button>
+                    <button type="button" class="btn btn-primary" onclick="allowPopup()">Yes</button>
                 </div>
             </div>
         </div>
